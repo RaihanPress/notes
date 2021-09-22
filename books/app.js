@@ -42,7 +42,7 @@
         a.click();
         setTimeout(()=>{
           el.disabled = false;
-          el.innerHTML = 'Download';
+          el.innerHTML = 'Re-Download';
         },2000)
      
     }
