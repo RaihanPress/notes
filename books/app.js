@@ -34,14 +34,14 @@
     }
     xhr.send();
     function load(f,el){
-        el.disabled = true;
+        el.setAttribute('disabled',"")
         el.innerHTML = 'Downloading';
         var a = document.createElement('a')
         a.href = "../files/"+f+".pdf";
-        a.download = f;
+        //a.download = f;
         a.click();
         setTimeout(()=>{
-          el.disabled = false;
+          el.removeAttribute('disabled');
           el.innerHTML = 'Re-Download';
         },2000)
      
