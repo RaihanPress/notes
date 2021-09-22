@@ -34,11 +34,16 @@
     }
     xhr.send();
     function load(f,el){
-        el.disabled = true;el.innerHTML = 'Downloading';
+        el.disabled = true;
+        //el.innerHTML = 'Downloading';
         var a = document.createElement('a')
         a.href = "../files/"+f+".pdf";
         a.download = f;
-        a.click();setTimeout(()=>{el.disabled = false;el.innerHTML = 'Download';},2000)
+        a.click();
+        setTimeout(()=>{
+          el.disabled = false;
+          //el.innerHTML = 'Download';
+        },2000)
      
     }
 })()
