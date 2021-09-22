@@ -23,6 +23,7 @@ hr{
     width: 100%;
     margin: 10px 5px;
 }
+[disabled="true"]{opacity:.5}
 .all{
     font-size: 25px;
     align-self: start;
