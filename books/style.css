@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    box-sizing: border-box;
+    user-select: none;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    background: #eee;
+}
+h1,h2{
+    font-weight: normal;
+}
+h1{
+    font-size: 22px;
+}
+hr{
+    width: 100%;
+    margin: 10px 5px;
+}
+.all{
+    font-size: 25px;
+    align-self: start;
+    margin: 15px 5px;
+}
+.items{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fff;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+}
+.items .item{
+    width: calc(100% - 15px);
+    max-width: 500px;
+    background: #fff;
+    border-bottom: 1px solid #aaa;
+    padding: 20px 10px;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+}
+.items .item:last-child{
+    border-bottom: 0;
+}
+.items .item:hover{
+    background: #eee;
+}
+.items .item .name{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    text-decoration: none;
+    line-break: anywhere;
+    font-size: 18px;
+    font-weight: bold;
+}
+.btn{
+    height: 100%;
+    padding: 7px;
+    font-size: 18px;
+    font-weight: bold;
+    background: linear-gradient(45deg,#e100ff, #a200ff);
+    border-radius: 3px;
+    color: #fff;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    transition: .2s;
+}
+.btn:hover{
+    box-shadow: 0 0 0 5px #eba0f1;
+}
+@media (max-width: 320px) {
+    .items .item{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
