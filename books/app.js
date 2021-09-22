@@ -22,7 +22,7 @@
                 <button title="Download" class="btn">Download</button>`
                     $('.items').appendChild(item)
                     $$('.item')[i].querySelector('button').addEventListener('click',function(){
-                        load(d[i])
+                        load(d[i],$$('.item')[i])
                     })
                 }
             }else{
@@ -33,10 +33,12 @@
         }
     }
     xhr.send();
-    function load(f){
+    function load(f,el){
+        el.disabled = true;el.innerHTML = 'Downloading';
         var a = document.createElement('a')
         a.href = "../files/"+f+".pdf";
         a.download = f;
-        a.click()
+        a.click();setTimeout(()=>{el.disabled = false;el.innerHTML = 'Download';},2000)
+     
     }
 })()
