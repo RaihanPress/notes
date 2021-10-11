@@ -32,6 +32,12 @@
             $('body').innerHTML = '<h1>Sorry! Invalid URL or File Not Found</h1><a href="../" style="margin-top:5px"><button class="btn">All Notes Here</button></a>'
         }
     }
+    xhr.onerror = ()={
+      if(this.status !== 404){
+      if(confirm('Internet Disconnected!\nRetry to Continue')){
+        location.reload();
+      }}
+    }
     xhr.send();
     function load(f,el){
         el.setAttribute('disabled',"")
