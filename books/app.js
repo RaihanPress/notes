@@ -8,7 +8,7 @@
         $('.items').innerHTML = ""
 
         var search = location.search.substr(1)
-        if (o[search]) {
+        if (o.toLowerCase()[search.toLowerCase()]) {
             document.title = search + " Notes - Faizan Ahmad"
             $('#title').innerHTML = search + " Notes"
             $('#c').innerHTML = "Downloads - "+o[search].length
